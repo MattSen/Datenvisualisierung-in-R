@@ -2,7 +2,7 @@
 
 #################### Datenvisualisierung mit R ####################
 
-#Übergeordnete Grafik-Optionen
+#Ãœbergeordnete Grafik-Optionen
 
 # 1) Die par-Funktion
 
@@ -10,10 +10,10 @@
 
 Standard.Parameter<-par()
 
-par(mfrow=c(2,2)) #Eine Reihe, zwei Spalten
-par(mar=c(6,6,6,6)) #Margin: legt die Ränder einer Garfik fest
-par(cex=2) #Schrifgröße
-par(xpd=TRUE) #Bei True kann auch "außerhalb des Plots gezeichnet werden
+par(mfrow=c(1,2)) #Eine Reihe, zwei Spalten
+par(mar=c(6,6,6,6)) #Margin: legt die RÃ¤nder einer Garfik fest
+par(cex=2) #SchrifgrÃ¶ÃŸe
+par(xpd=TRUE) #Bei True kann auch "auÃŸerhalb des Plots gezeichnet werden
 
 
 par(Standard.Parameter)
@@ -132,7 +132,7 @@ points(y=Mittelwerte.Temp,
        cex=1.5,
        col=viridis(1,alpha=0.7))
 
-#Kelchblätter Iris unten
+#KelchblÃ¤tter Iris unten
 
 plot(y=iris$Sepal.Width,
      x=iris$Sepal.Length,
@@ -144,12 +144,12 @@ plot(y=iris$Sepal.Width,
      xlab="Sepal Length [mm]",
      xlim=c(4,8.5),
      ylim=c(1,5),
-     main="Kelchblätter der Gattung Iris",
+     main="KelchblÃ¤tter der Gattung Iris",
      bty="n",
      col=viridis(3,alpha=0.7)[as.numeric(iris$Species)]
 )
 
-# Trendlinien hinzufügen
+# Trendlinien hinzufÃ¼gen
 
 Setosa<-subset(iris, Species == "setosa", select = c(Sepal.Width, Sepal.Length))
 Versicolor<-subset(iris, Species == "versicolor", select = c(Sepal.Width, Sepal.Length))
@@ -165,7 +165,7 @@ abline(lm(Virginica$Sepal.Width~Virginica$Sepal.Length),
        col=viridis(3,alpha=0.7)[3],
        lwd=3)
 
-# Eine Legende hinzufügen
+# Eine Legende hinzufÃ¼gen
 
 par(xpd=T)
 
@@ -183,7 +183,7 @@ boxplot(iris$Sepal.Width~iris$Species,
         las=1,
         ylab="Sepal Width [mm]",
         xlab="Spezies",
-        main="Kelchblätter der Gattung Iris",
+        main="KelchblÃ¤tter der Gattung Iris",
         ylim=c(2,4.5),
         #notch=T,
         col=viridis(3,alpha=0.7))
