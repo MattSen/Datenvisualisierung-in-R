@@ -3,7 +3,7 @@
 #################### Datenvisualisierung mit R ####################
 
 # Pie Charts
-require()
+require(viridis)
 
 pie(c(10,20,50))
 
